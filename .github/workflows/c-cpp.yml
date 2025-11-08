@@ -3,6 +3,7 @@ name: BoyCoin Daemon Build
 on:
   push:
     branches: [ "main" ] # Runs when you push to the main branch
+  workflow_dispatch:
 
 jobs:
   build:
