@@ -367,9 +367,9 @@ public:
                 0x1d00ffff,
                 1,
                 50 * COIN);
-        consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"00000000da84f2bafbbc53dee25a72ae507ff4914b867c565be350b0da8bf043"});
-        assert(genesis.hashMerkleRoot == uint256{"7aa0a7ae1e223414cb807e40cd57e667b718e42aaf9306db9102fe28912b7b4e"});
+         = genesis.GetHash();
+        assert(consensus.hashGenesisBlock == uint256{"442049104dd110977b2165c509b5d42ef828c822f884ea645c693bb0cc0dcbca"});
+        assert(genesis.hashMerkleRoot == uint256{"6a5e18de8851d935fac8dd975b7884e19ee5b3df85965a4c379874fc501089b5"});
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -502,8 +502,8 @@ public:
 
         genesis = CreateGenesisBlock(1598918400, 52613770, 0x1e0377ae, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"00000008819873e925422c1ff0f99f7cc9bbb232af63a077a480a3633bee1ef6"});
-        assert(genesis.hashMerkleRoot == uint256{"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"});
+        assert(consensus.hashGenesisBlock == uint256{"442049104dd110977b2165c509b5d42ef828c822f884ea645c693bb0cc0dcbca"});
+        assert(genesis.hashMerkleRoot == uint256{"6a5e18de8851d935fac8dd975b7884e19ee5b3df85965a4c379874fc501089b5"});
 
         m_assumeutxo_data = {
             {
@@ -614,8 +614,8 @@ public:
 
         genesis = CreateGenesisBlock(1296688602, 2, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256{"0f9188f13cb7b2c71f2a335e3a4fc328bf5beb436012afca590b1a11466e2206"});
-        assert(genesis.hashMerkleRoot == uint256{"4a5e1e4baab89f3a32518a88c31bc87f618f76673e2cc77ab2127b7afdeda33b"});
+        assert(consensus.hashGenesisBlock == uint256{"442049104dd110977b2165c509b5d42ef828c822f884ea645c693bb0cc0dcbca"});
+        assert(genesis.hashMerkleRoot == uint256{"6a5e18de8851d935fac8dd975b7884e19ee5b3df85965a4c379874fc501089b5"});
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();
