@@ -360,13 +360,15 @@ public:
 
         const char* testnet4_genesis_msg = "03/May/2024 000000000000000000001ebd58c244970b3aa9d783bb001011fbe8ea8e98e00e";
         const CScript testnet4_genesis_script = CScript() << "000000000000000000000000000000000000000000000000000000000000000000"_hex << OP_CHECKSIG;
-        genesis = CreateGenesisBlock(testnet4_genesis_msg,
-                testnet4_genesis_script,
-                1714777860,
-                393743547,
-                0x1d00ffff,
-                1,
-                50 * COIN);
+        
+        //genesis = CreateGenesisBlock(testnet4_genesis_msg,
+        //        testnet4_genesis_script,
+        //        1714777860,
+        //        3,
+        //        0x207fffff,
+        //        1,
+        //        50 * COIN); 
+        genesis = CreateGenesisBlock(1762593540, 3, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock  = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256{"442049104dd110977b2165c509b5d42ef828c822f884ea645c693bb0cc0dcbca"});
         assert(genesis.hashMerkleRoot == uint256{"6a5e18de8851d935fac8dd975b7884e19ee5b3df85965a4c379874fc501089b5"});
