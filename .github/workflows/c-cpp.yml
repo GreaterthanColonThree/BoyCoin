@@ -1,0 +1,39 @@
+name: BoyCoin Daemon Build
+
+on:
+  push:
+    branches: [ "main" ] # Runs when you push to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest # The VM that does the work
+
+    steps:
+    - name: Checkout BoyCoin Code
+      uses: actions/checkout@v4
+      
+    - name: Install Dependencies
+      run: |
+        # Update system and install build-essentials (GCC, C++ tools)
+        sudo apt update
+        sudo apt install -y build-essential libtool autotools-dev automake pkg-config bsdmainutils python3
+        
+        # Install Bitcoin Core specific libraries (Boost, SSL, Event, MiniUPnP, ZMQ)
+        sudo apt install -y libssl-dev libevent-dev libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev libminiupnpc-dev libzmq3-dev
+
+    - name: Prepare Build Environment (Autogen & Configure)
+      run: |
+        ./autogen.sh
+        # Configure for the fastest build: disable the GUI and the Wallet
+        ./configure --disable-wallet --with-gui=no
+
+    - name: Compile BoyCoin Executable
+      # -j2 uses 2 CPU cores, speeding up the build dramatically
+      run: make -j2
+
+    - name: Upload Compiled Daemon
+      uses: actions/upload-artifact@v4
+      with:
+        name: boycoind-linux-executable
+        path: src/bitcoind
+        # The compiled daemon will be called 'bitcoind' and is located in the src/ folder.
