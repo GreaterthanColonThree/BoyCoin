@@ -1,4 +1,4 @@
-// Copyright (c) 2025 The Bitcoin Core developers
+// Copyright (c) 2025 The Boycoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,26 +22,26 @@ const TranslateFn G_TRANSLATION_FUN{nullptr};
 static constexpr auto HELP_USAGE = R"(Usage: %s [OPTIONS] COMMAND...
 
 Options:
-  -m, --multiprocess     Run multiprocess binaries bitcoin-node, bitcoin-gui.
+  -m, --multiprocess     Run multiprocess binaries boycoin-node, bitcoin-gui.
   -M, --monolithic       Run monolithic binaries bitcoind, bitcoin-qt. (Default behavior)
   -v, --version          Show version information
   -h, --help             Show full help message
 
 Commands:
-  gui [ARGS]     Start GUI, equivalent to running 'bitcoin-qt [ARGS]' or 'bitcoin-gui [ARGS]'.
-  node [ARGS]    Start node, equivalent to running 'bitcoind [ARGS]' or 'bitcoin-node [ARGS]'.
-  rpc [ARGS]     Call RPC method, equivalent to running 'bitcoin-cli -named [ARGS]'.
-  wallet [ARGS]  Call wallet command, equivalent to running 'bitcoin-wallet [ARGS]'.
-  tx [ARGS]      Manipulate hex-encoded transactions, equivalent to running 'bitcoin-tx [ARGS]'.
+  gui [ARGS]     Start GUI, equivalent to running 'boycoin-qt [ARGS]' or 'boycoin-gui [ARGS]'.
+  node [ARGS]    Start node, equivalent to running 'boycoind [ARGS]' or 'boycoin-node [ARGS]'.
+  rpc [ARGS]     Call RPC method, equivalent to running 'boycoin-cli -named [ARGS]'.
+  wallet [ARGS]  Call wallet command, equivalent to running 'boycoin-wallet [ARGS]'.
+  tx [ARGS]      Manipulate hex-encoded transactions, equivalent to running 'boycoin-tx [ARGS]'.
   help           Show full help message.
 )";
 
 static constexpr auto HELP_FULL = R"(
 Additional less commonly used commands:
-  bench [ARGS]      Run bench command, equivalent to running 'bench_bitcoin [ARGS]'.
-  chainstate [ARGS] Run bitcoin kernel chainstate util, equivalent to running 'bitcoin-chainstate [ARGS]'.
-  test [ARGS]       Run unit tests, equivalent to running 'test_bitcoin [ARGS]'.
-  test-gui [ARGS]   Run GUI unit tests, equivalent to running 'test_bitcoin-qt [ARGS]'.
+  bench [ARGS]      Run bench command, equivalent to running 'bench_boycoin [ARGS]'.
+  chainstate [ARGS] Run bitcoin kernel chainstate util, equivalent to running 'boycoin-chainstate [ARGS]'.
+  test [ARGS]       Run unit tests, equivalent to running 'test_boycoin [ARGS]'.
+  test-gui [ARGS]   Run GUI unit tests, equivalent to running 'test_boycoin-qt [ARGS]'.
 )";
 
 static constexpr auto HELP_SHORT = R"(
